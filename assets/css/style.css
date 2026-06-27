@@ -295,13 +295,18 @@ body {
   flex-direction: column;
   padding: 0 48px 40px;
   pointer-events: none;
-  clip-path: circle(0% at calc(100% - 56px) 36px);
-  transition: clip-path 0.7s cubic-bezier(0.77,0,0.18,1);
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s 0.35s;
+  visibility: hidden;
 }
 
 .nav-overlay.is-open {
   pointer-events: all;
-  clip-path: circle(150% at calc(100% - 56px) 36px);
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s 0s;
 }
 
 /* Üst satır: sosyal linkler (burger ile aynı yükseklikte) */
