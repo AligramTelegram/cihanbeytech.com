@@ -49,33 +49,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ── HERO ENTRANCE ── */
-const heroTl = gsap.timeline({ delay: 0.15 });
+const heroTl = gsap.timeline({ delay: 0.3 });
 
 heroTl
-  .to('.hero__topbar', { opacity: 1, duration: 0.6, ease: 'power2.out' })
-  .to('.hero__topbar-line', { width: '100%', duration: 1, ease: 'power2.out' }, '-=0.4')
-  .to('.hero__word', {
-    y: '0%', opacity: 1,
-    duration: 0.9, stagger: 0.08,
-    ease: 'power4.out'
-  }, '-=0.6')
-  .to('.hero__bottom',     { opacity: 1, duration: 0.7, ease: 'power2.out' }, '-=0.3')
-  .to('.hero__side-label', { opacity: 1, duration: 0.6, ease: 'power2.out' }, '-=0.5')
-  .to('.hero__badge-wrap', { opacity: 1, duration: 0.6, ease: 'power2.out' }, '-=0.5');
-
-/* Hero metrik sayacı */
-const heroNum = document.querySelector('.hero__metric-num[data-target]');
-if (heroNum) {
-  const target = parseInt(heroNum.dataset.target);
-  const start  = performance.now();
-  const dur    = 1800;
-  const tick   = now => {
-    const t = Math.min((now - start) / dur, 1);
-    heroNum.textContent = Math.round((1 - Math.pow(1 - t, 3)) * target);
-    if (t < 1) requestAnimationFrame(tick);
-  };
-  setTimeout(() => requestAnimationFrame(tick), 800);
-}
+  .to('.hero__title',     { opacity: 1, y: 0, duration: 1.1, ease: 'power4.out' })
+  .to('.hero__sub-brand', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.6')
+  .to('.hero__info',      { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5');
 
 /* ── HAKKIMIZDA ── */
 gsap.to('.abt-reveal', {
