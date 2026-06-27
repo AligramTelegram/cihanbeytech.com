@@ -52,9 +52,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 const heroTl = gsap.timeline({ delay: 0.3 });
 
 heroTl
-  .to('.hero__title',     { opacity: 1, y: 0, duration: 1.1, ease: 'power4.out' })
-  .to('.hero__sub-brand', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.6')
-  .to('.hero__info',      { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5');
+  .to('.hero__info', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' });
 
 /* ── HAKKIMIZDA ── */
 gsap.to('.abt-reveal', {

@@ -341,52 +341,13 @@ body.menu-open .nav__logo { opacity: 0; pointer-events: none; }
   z-index: 2;
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: flex-end;
   padding: 0 clamp(20px, 4vw, 60px) clamp(32px, 5vh, 56px);
 }
 
-/* Sol: devasa başlık */
-.hero__title-wrap {
-  flex: 1;
-  min-width: 0;
-}
-
-.hero__title {
-  font-family: var(--font-disp);
-  font-size: clamp(4rem, 13vw, 14rem);
-  font-weight: 800;
-  line-height: 0.92;
-  letter-spacing: -0.04em;
-  color: #f2ede4;
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateY(60px);
-}
-
-.hero__asterisk {
-  display: inline-block;
-  font-size: 0.45em;
-  vertical-align: super;
-  color: rgba(242,237,228,0.6);
-  margin-left: 0.05em;
-}
-
-.hero__sub-brand {
-  font-family: var(--font-disp);
-  font-size: clamp(1.2rem, 3vw, 2.8rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: rgba(242,237,228,0.5);
-  margin-top: 4px;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-/* Sağ: açıklama + CTA */
+/* Açıklama + CTA */
 .hero__info {
-  flex: 0 0 auto;
-  max-width: 340px;
+  max-width: 360px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
