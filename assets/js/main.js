@@ -120,7 +120,7 @@ function revealOnScroll(selector, fromX = 0, fromY = 0) {
 
 revealOnScroll('.services .reveal-up',       0, 40);
 revealOnScroll('.portfolio .reveal-up',      0, 40);
-revealOnScroll('.process .reveal-up',        0, 40);
+/* process reveal handled separately */
 revealOnScroll('.testimonials .reveal-up',   0, 40);
 revealOnScroll('.contact .reveal-up',        0, 40);
 revealOnScroll('.about .reveal-left',  -50,  0);
@@ -293,12 +293,59 @@ gsap.to('.pf-reveal', {
   });
 })();
 
-/* ------ PROCESS LINE ------ */
-gsap.fromTo('.process__line',
-  { scaleX: 0, transformOrigin: 'left center' },
-  { scaleX: 1, duration: 1.5, ease: 'power2.out',
-    scrollTrigger: { trigger: '.process__steps', start: 'top 70%' } }
-);
+/* ------ PROCESS HEADER REVEAL ------ */
+gsap.to('.proc-reveal', {
+  opacity: 1, y: 0, duration: 0.75, stagger: 0.12, ease: 'power3.out',
+  scrollTrigger: { trigger: '.process__header', start: 'top 82%' }
+});
+
+/* ------ PROCESS TIMELINE ------ */
+(function initProcessTimeline() {
+  const rows  = gsap.utils.toArray('.proc-row');
+  const cards = gsap.utils.toArray('.proc-card');
+  const fill  = document.getElementById('procLine');
+  if (!rows.length) return;
+
+  // Her kart clip-path ile soldan açılır
+  cards.forEach((card, i) => {
+    gsap.to(card, {
+      clipPath: 'inset(0 0% 0 0 round 20px)',
+      duration: 0.75,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: rows[i],
+        start: 'top 82%',
+        toggleActions: 'play none none none'
+      }
+    });
+  });
+
+  // Dot'lar scale ile belirir
+  rows.forEach((row, i) => {
+    const dot = row.querySelector('.process__dot span');
+    if (!dot) return;
+    gsap.fromTo(dot,
+      { scale: 0 },
+      {
+        scale: 1, duration: 0.5, ease: 'back.out(2)',
+        scrollTrigger: { trigger: row, start: 'top 82%', toggleActions: 'play none none none' }
+      }
+    );
+  });
+
+  // Dikey çizgi ScrollTrigger ile uzar
+  if (fill) {
+    ScrollTrigger.create({
+      trigger: '.process__tl',
+      start: 'top 75%',
+      end: 'bottom 25%',
+      scrub: 0.8,
+      onUpdate(self) {
+        fill.style.height = (self.progress * 100) + '%';
+      }
+    });
+  }
+})();
 
 /* ------ PARALLAX ORBS + HERO CARDS (desktop only) ------ */
 if (window.innerWidth > 768) {

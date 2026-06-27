@@ -442,55 +442,101 @@
   <!-- SÜREÇ -->
   <section class="process" id="surec">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag reveal-up">Nasıl Çalışırız</span>
-        <h2 class="section-title reveal-up">Başarıya Giden <span class="gradient-text">4 Adım</span></h2>
-        <p class="section-sub reveal-up">Şeffaf, hızlı ve sonuç odaklı bir süreç yürütüyoruz.</p>
+
+      <div class="process__header">
+        <div class="process__header-left">
+          <span class="section-tag proc-reveal">Nasıl Çalışırız</span>
+          <h2 class="section-title proc-reveal">Başarıya Giden <span class="gradient-text">4 Adım</span></h2>
+        </div>
+        <p class="process__header-sub proc-reveal">Şeffaf, hızlı ve sonuç odaklı<br>bir süreç yürütüyoruz.</p>
       </div>
-      <div class="process__steps">
-        <div class="process__line"></div>
 
-        <div class="process__step reveal-up">
-          <div class="process__num">01</div>
-          <div class="process__card">
-            <div class="process__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="process__tl">
+
+        <!-- Dikey çizgi -->
+        <div class="process__vline"><div class="process__vline-fill" id="procLine"></div></div>
+
+        <!-- Adım 1 -->
+        <div class="process__row proc-row">
+          <div class="process__left">
+            <div class="process__dot"><span></span></div>
+            <div class="process__big-num">01</div>
+          </div>
+          <div class="process__card proc-card">
+            <div class="process__card-top">
+              <div class="process__icon-wrap" style="--ic:#7c3aed">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="process__duration">1-2 Gün</span>
             </div>
-            <h3>Keşif & Brifing</h3>
-            <p>Hedeflerinizi, rakiplerinizi ve beklentilerinizi derinlemesine anlıyoruz. Proje kapsamını birlikte belirliyoruz.</p>
+            <h3 class="process__card-title">Keşif & Brifing</h3>
+            <p class="process__card-desc">Hedeflerinizi, rakiplerinizi ve beklentilerinizi derinlemesine anlıyoruz. Proje kapsamını birlikte belirliyoruz.</p>
+            <div class="process__tags">
+              <span>Strateji</span><span>Analiz</span><span>Hedef Belirleme</span>
+            </div>
           </div>
         </div>
 
-        <div class="process__step reveal-up" style="--delay:0.15s">
-          <div class="process__num">02</div>
-          <div class="process__card">
-            <div class="process__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <!-- Adım 2 -->
+        <div class="process__row proc-row process__row--alt">
+          <div class="process__left">
+            <div class="process__dot"><span></span></div>
+            <div class="process__big-num">02</div>
+          </div>
+          <div class="process__card proc-card">
+            <div class="process__card-top">
+              <div class="process__icon-wrap" style="--ic:#9333ea">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="process__duration">3-5 Gün</span>
             </div>
-            <h3>Tasarım & Prototip</h3>
-            <p>Onayladığınız wireframe'lerden etkileyici tasarımlar üretiyoruz. Her detay sizinle konuşularak şekilleniyor.</p>
+            <h3 class="process__card-title">Tasarım & Prototip</h3>
+            <p class="process__card-desc">Onayladığınız wireframe'lerden etkileyici tasarımlar üretiyoruz. Her detay sizinle konuşularak şekilleniyor.</p>
+            <div class="process__tags">
+              <span>UI/UX</span><span>Wireframe</span><span>Prototip</span>
+            </div>
           </div>
         </div>
 
-        <div class="process__step reveal-up" style="--delay:0.3s">
-          <div class="process__num">03</div>
-          <div class="process__card">
-            <div class="process__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <!-- Adım 3 -->
+        <div class="process__row proc-row">
+          <div class="process__left">
+            <div class="process__dot"><span></span></div>
+            <div class="process__big-num">03</div>
+          </div>
+          <div class="process__card proc-card">
+            <div class="process__card-top">
+              <div class="process__icon-wrap" style="--ic:#6d28d9">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="process__duration">7-14 Gün</span>
             </div>
-            <h3>Geliştirme & Test</h3>
-            <p>Temiz kod, hızlı yükleme, tüm cihazlarda mükemmel görünüm. Kapsamlı testlerle kaliteyi garanti ediyoruz.</p>
+            <h3 class="process__card-title">Geliştirme & Test</h3>
+            <p class="process__card-desc">Temiz kod, hızlı yükleme, tüm cihazlarda mükemmel görünüm. Kapsamlı testlerle kaliteyi garanti ediyoruz.</p>
+            <div class="process__tags">
+              <span>Kod</span><span>Test</span><span>Optimizasyon</span>
+            </div>
           </div>
         </div>
 
-        <div class="process__step reveal-up" style="--delay:0.45s">
-          <div class="process__num">04</div>
-          <div class="process__card">
-            <div class="process__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <!-- Adım 4 -->
+        <div class="process__row proc-row process__row--alt">
+          <div class="process__left">
+            <div class="process__dot process__dot--last"><span></span></div>
+            <div class="process__big-num">04</div>
+          </div>
+          <div class="process__card proc-card">
+            <div class="process__card-top">
+              <div class="process__icon-wrap" style="--ic:#4f46e5">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="process__duration">Sürekli</span>
             </div>
-            <h3>Lansman & Destek</h3>
-            <p>Projenizi canlıya alıyoruz ve devamında yanınızda oluyoruz. Bakım, güncelleme ve geliştirme desteği sağlıyoruz.</p>
+            <h3 class="process__card-title">Lansman & Destek</h3>
+            <p class="process__card-desc">Projenizi canlıya alıyoruz ve devamında yanınızda oluyoruz. Bakım, güncelleme ve geliştirme desteği sağlıyoruz.</p>
+            <div class="process__tags">
+              <span>Canlı Yayın</span><span>Destek</span><span>Güncelleme</span>
+            </div>
           </div>
         </div>
 
