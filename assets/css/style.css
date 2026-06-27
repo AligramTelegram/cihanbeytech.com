@@ -45,6 +45,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--purple-main) var(--dark-bg);
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar { width: 6px; }
@@ -1028,6 +1029,12 @@ body {
 .portfolio {
   padding: 80px 0 0;
   background: var(--dark-bg-alt);
+  overflow: hidden;
+}
+
+/* Mobilde carousel overflow visible olmalı */
+@media (max-width: 768px) {
+  .portfolio { overflow: visible; }
 }
 
 .pf-header {
@@ -1350,6 +1357,7 @@ body {
 .process {
   padding: 120px 0;
   background: var(--light-bg-alt);
+  overflow: hidden;
 }
 
 .process__steps {
@@ -1426,6 +1434,7 @@ body {
 .about {
   padding: 120px 0;
   background: var(--dark-bg);
+  overflow: hidden;
 }
 
 .about__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -1516,6 +1525,7 @@ body {
 .testimonials {
   padding: 120px 0;
   background: var(--light-bg);
+  overflow: hidden;
 }
 
 .testimonials__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
@@ -1706,6 +1716,13 @@ body {
 .reveal-up    { transform: translateY(40px); }
 .reveal-left  { transform: translateX(-50px); }
 .reveal-right { transform: translateX(50px); }
+
+/* Mobilde yatay kaymayı tamamen engelle */
+@media (max-width: 1024px) {
+  .reveal-left, .reveal-right {
+    transform: translateY(30px); /* yatay yerine dikey animasyon */
+  }
+}
 
 /* ======= RESPONSIVE ======= */
 /* =============================================

@@ -300,41 +300,37 @@ gsap.fromTo('.process__line',
     scrollTrigger: { trigger: '.process__steps', start: 'top 70%' } }
 );
 
-/* ------ PARALLAX ORBS (throttled RAF) ------ */
-let orbRaf;
-let ox = 0, oy = 0;
-document.addEventListener('mousemove', (e) => {
-  ox = e.clientX;
-  oy = e.clientY;
-  if (orbRaf) return;
-  orbRaf = requestAnimationFrame(() => {
-    const cx = window.innerWidth  / 2;
-    const cy = window.innerHeight / 2;
-    const dx = (ox - cx) / cx;
-    const dy = (oy - cy) / cy;
-    gsap.to('.orb--1', { x: dx * 25, y: dy * 18, duration: 2, ease: 'power1.out' });
-    gsap.to('.orb--2', { x: dx * -18, y: dy * -14, duration: 2, ease: 'power1.out' });
-    gsap.to('.orb--3', { x: dx * 12, y: dy * 8, duration: 2, ease: 'power1.out' });
-    orbRaf = null;
-  });
-});
+/* ------ PARALLAX ORBS + HERO CARDS (desktop only) ------ */
+if (window.innerWidth > 768) {
+  let orbRaf, cardRaf;
+  let ox = 0, oy = 0, cx2 = 0, cy2 = 0;
 
-/* ------ HERO CARDS SUBTLE MOUSE PARALLAX ------ */
-let cardRaf;
-let cx = 0, cy = 0;
-document.addEventListener('mousemove', (e) => {
-  cx = e.clientX; cy = e.clientY;
-  if (cardRaf) return;
-  cardRaf = requestAnimationFrame(() => {
-    const dx = (cx / window.innerWidth  - 0.5);
-    const dy = (cy / window.innerHeight - 0.5);
-    gsap.to('.hv__card--main',   { x: dx * -12, y: dy * -8,  duration: 1.5, ease: 'power1.out' });
-    gsap.to('.hv__card--metric', { x: dx * 10,  y: dy * 12,  duration: 1.5, ease: 'power1.out' });
-    gsap.to('.hv__card--time',   { x: dx * -8,  y: dy * 15,  duration: 1.5, ease: 'power1.out' });
-    gsap.to('.hv__card--review', { x: dx * 14,  y: dy * -10, duration: 1.5, ease: 'power1.out' });
-    cardRaf = null;
+  document.addEventListener('mousemove', (e) => {
+    ox = e.clientX; oy = e.clientY;
+    cx2 = e.clientX; cy2 = e.clientY;
+    if (!orbRaf) {
+      orbRaf = requestAnimationFrame(() => {
+        const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+        const dx = (ox - cx) / cx, dy = (oy - cy) / cy;
+        gsap.to('.orb--1', { x: dx * 25, y: dy * 18, duration: 2, ease: 'power1.out' });
+        gsap.to('.orb--2', { x: dx * -18, y: dy * -14, duration: 2, ease: 'power1.out' });
+        gsap.to('.orb--3', { x: dx * 12, y: dy * 8, duration: 2, ease: 'power1.out' });
+        orbRaf = null;
+      });
+    }
+    if (!cardRaf) {
+      cardRaf = requestAnimationFrame(() => {
+        const dx = (cx2 / window.innerWidth - 0.5);
+        const dy = (cy2 / window.innerHeight - 0.5);
+        gsap.to('.hv__card--main',   { x: dx * -12, y: dy * -8,  duration: 1.5, ease: 'power1.out' });
+        gsap.to('.hv__card--metric', { x: dx * 10,  y: dy * 12,  duration: 1.5, ease: 'power1.out' });
+        gsap.to('.hv__card--time',   { x: dx * -8,  y: dy * 15,  duration: 1.5, ease: 'power1.out' });
+        gsap.to('.hv__card--review', { x: dx * 14,  y: dy * -10, duration: 1.5, ease: 'power1.out' });
+        cardRaf = null;
+      });
+    }
   });
-});
+}
 
 /* ------ CARD TILT (GPU-only, passive) ------ */
 document.querySelectorAll('.service-card, .project-card').forEach(card => {
