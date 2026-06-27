@@ -96,55 +96,58 @@
 
   <!-- ═══════════════ HAKKIMIZDA ═══════════════ -->
   <section class="about" id="hakkimizda">
-    <div class="container">
-      <div class="about__inner">
 
-        <div class="about__left">
-          <span class="section-label abt-reveal">Hakkımızda</span>
-          <h2 class="about__title abt-reveal">
-            Kod yazan değil,<br>
-            <em>çözüm üreten</em><br>
-            bir ekip.
-          </h2>
-        </div>
+    <!-- Particle network canvas -->
+    <canvas class="about__canvas" id="aboutCanvas"></canvas>
 
-        <div class="about__right">
-          <p class="about__desc abt-reveal">
-            CihanBeyTech olarak her projeye strateji, tasarım ve mühendislik
-            perspektifinden yaklaşıyoruz. Müşterilerimizin dijital varlıklarını
-            sadece güzel değil — performanslı, ölçeklenebilir ve dönüşüm odaklı
-            yapıyoruz.
-          </p>
-          <p class="about__desc abt-reveal">
-            Küçük işletmelerden kurumsal firmalara, startup'lardan
-            e-ticaret devlerine kadar her ölçekte proje deneyimimiz var.
-          </p>
-          <a href="#iletisim" class="about__link abt-reveal">
-            Birlikte çalışalım
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </a>
-        </div>
+    <div class="about__split">
 
+      <!-- Sol: metin -->
+      <div class="about__left">
+        <span class="section-label abt-reveal">Hakkımızda</span>
+        <h2 class="about__title abt-reveal">
+          Kod yazan değil,<br>
+          <em>çözüm üreten</em><br>
+          bir ekip.
+        </h2>
+        <p class="about__desc abt-reveal">
+          CihanBeyTech olarak her projeye strateji, tasarım ve mühendislik
+          perspektifinden yaklaşıyoruz. Müşterilerimizin dijital varlıklarını
+          sadece güzel değil — performanslı, ölçeklenebilir ve dönüşüm odaklı yapıyoruz.
+        </p>
+        <a href="#iletisim" class="about__link abt-reveal">
+          Birlikte çalışalım
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
       </div>
 
-      <div class="about__stats">
+      <!-- Orta çizgi -->
+      <div class="about__divider"></div>
+
+      <!-- Sağ: istatistikler -->
+      <div class="about__right">
         <div class="about__stat abt-reveal">
           <span class="about__stat-num" data-target="312">0</span>
+          <span class="about__stat-suffix">+</span>
           <span class="about__stat-label">Tamamlanan Proje</span>
         </div>
         <div class="about__stat abt-reveal">
-          <span class="about__stat-num">5+</span>
+          <span class="about__stat-num">5</span>
+          <span class="about__stat-suffix">+</span>
           <span class="about__stat-label">Yıl Deneyim</span>
         </div>
         <div class="about__stat abt-reveal">
-          <span class="about__stat-num">48h</span>
+          <span class="about__stat-num">48</span>
+          <span class="about__stat-suffix">h</span>
           <span class="about__stat-label">Ortalama Yanıt Süresi</span>
         </div>
         <div class="about__stat abt-reveal">
-          <span class="about__stat-num">%100</span>
+          <span class="about__stat-num">100</span>
+          <span class="about__stat-suffix">%</span>
           <span class="about__stat-label">Müşteri Memnuniyeti</span>
         </div>
       </div>
+
     </div>
   </section>
 

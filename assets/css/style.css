@@ -481,32 +481,77 @@ body.menu-open .nav__logo { opacity: 0; pointer-events: none; }
    HAKKIMIZDA
 ═══════════════════════════════════════ */
 .about {
-  padding: 140px 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   border-top: 1px solid var(--border);
   overflow: hidden;
 }
 
-.about__inner {
+/* Particle canvas */
+.about__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* Split layout */
+.about__split {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  margin-bottom: 80px;
-  align-items: start;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Sol */
+.about__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  padding: 100px clamp(32px, 6vw, 90px);
+}
+
+/* Orta dikey çizgi */
+.about__divider {
+  width: 1px;
+  background: var(--border);
+  align-self: stretch;
+}
+
+/* Sağ */
+.about__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  padding: 100px clamp(32px, 6vw, 90px);
 }
 
 .about__title {
   font-family: var(--font-disp);
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.02em;
+}
+
+.about__title em {
+  font-style: italic;
+  color: var(--accent-2);
 }
 
 .about__desc {
   font-size: 0.95rem;
   color: var(--muted-2);
   line-height: 1.8;
-  margin-bottom: 20px;
 }
 
 .about__link {
@@ -517,41 +562,53 @@ body.menu-open .nav__logo { opacity: 0; pointer-events: none; }
   font-weight: 600;
   color: var(--accent-2);
   text-decoration: none;
-  margin-top: 8px;
   transition: gap 0.25s;
 }
 .about__link:hover { gap: 14px; }
 
-.about__stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
+/* İstatistik kartları */
 .about__stat {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 32px 28px;
-  background: var(--bg-card);
-  transition: background 0.25s;
+  gap: 8px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
 }
-.about__stat:hover { background: #161616; }
+.about__stat:last-child { border-bottom: none; }
 
 .about__stat-num {
   font-family: var(--font-disp);
-  font-size: 2.4rem;
+  font-size: clamp(3rem, 5vw, 5rem);
   font-weight: 800;
   color: #fff;
+  line-height: 1;
+  display: inline;
+}
+
+.about__stat-suffix {
+  font-family: var(--font-disp);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--accent);
   line-height: 1;
 }
 
 .about__stat-label {
   font-size: 12px;
   color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about__split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .about__divider { width: 100%; height: 1px; }
+  .about__left, .about__right { padding: 56px 24px; }
+  .about__right { gap: 0; }
 }
 
 /* ═══════════════════════════════════════

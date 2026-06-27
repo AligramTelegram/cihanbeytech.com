@@ -64,11 +64,79 @@ if (scrollIndicator) {
   }, { passive: true });
 }
 
-/* ── HAKKIMIZDA ── */
+/* ── HAKKIMIZDA PARTICLE NETWORK ── */
+(function initParticles() {
+  const canvas = document.getElementById('aboutCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles;
+  const COUNT = window.innerWidth < 768 ? 40 : 80;
+  const MAX_DIST = 160;
+  const ACCENT = '139,92,246';
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  function mkParticle() {
+    return {
+      x: Math.random() * W,
+      y: Math.random() * H,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      r: Math.random() * 2 + 1,
+    };
+  }
+
+  function init() {
+    resize();
+    particles = Array.from({ length: COUNT }, mkParticle);
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    for (let i = 0; i < COUNT; i++) {
+      const p = particles[i];
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${ACCENT},0.7)`;
+      ctx.fill();
+
+      for (let j = i + 1; j < COUNT; j++) {
+        const q = particles[j];
+        const dx = p.x - q.x, dy = p.y - q.y;
+        const d = Math.sqrt(dx*dx + dy*dy);
+        if (d < MAX_DIST) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(q.x, q.y);
+          ctx.strokeStyle = `rgba(${ACCENT},${(1 - d / MAX_DIST) * 0.35})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+
+  const obs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { init(); draw(); obs.disconnect(); }
+  }, { threshold: 0.1 });
+  obs.observe(canvas);
+
+  window.addEventListener('resize', () => { resize(); }, { passive: true });
+})();
+
+/* ── HAKKIMIZDA REVEAL ── */
 gsap.to('.abt-reveal', {
   opacity: 1, y: 0,
-  duration: 0.7, stagger: 0.1, ease: 'power3.out',
-  scrollTrigger: { trigger: '.about', start: 'top 80%' }
+  duration: 0.7, stagger: 0.12, ease: 'power3.out',
+  scrollTrigger: { trigger: '.about', start: 'top 75%' }
 });
 
 /* About stat sayaçlar */
