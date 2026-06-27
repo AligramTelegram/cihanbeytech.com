@@ -453,17 +453,20 @@ body {
   background: rgba(255,255,255,0.12);
 }
 
-/* Overlay açıkken nav içeriğini gizle (burger hariç) */
-.nav-overlay.is-open ~ * .nav__logo,
+/* Menü açıkken nav'ı overlay'in üstüne çıkar, içeriği gizle */
+body.menu-open .nav {
+  z-index: 1003;
+  background: transparent !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.nav__logo, .nav__status { transition: opacity 0.25s; }
+
 body.menu-open .nav__logo,
 body.menu-open .nav__status {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s;
-}
-
-.nav__logo, .nav__status {
-  transition: opacity 0.3s;
 }
 
 @media (max-width: 768px) {
