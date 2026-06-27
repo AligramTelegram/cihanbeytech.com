@@ -466,6 +466,18 @@ body.menu-open .nav {
   box-shadow: none !important;
 }
 
+/* Menü açıkken hero animasyonlarını durdur — lag önleme */
+body.menu-open .orb,
+body.menu-open .hv__card--main,
+body.menu-open .hv__card--metric,
+body.menu-open .hv__card--time,
+body.menu-open .hv__card--review,
+body.menu-open .hero__grid-overlay,
+body.menu-open [class*="float"] {
+  animation-play-state: paused !important;
+  will-change: auto !important;
+}
+
 .nav__logo, .nav__status { transition: opacity 0.25s; }
 
 body.menu-open .nav__logo,
@@ -522,6 +534,14 @@ body.menu-open .nav__status {
   border-radius: 50%;
   filter: blur(80px);
   opacity: 0.5;
+  will-change: auto;
+}
+
+@media (max-width: 768px) {
+  .orb { filter: blur(40px); animation: none !important; opacity: 0.35; }
+  .hv__card, .hero__float--1, .hero__float--2, .hero__float--3 {
+    animation: none !important;
+  }
 }
 
 .orb--1 {
