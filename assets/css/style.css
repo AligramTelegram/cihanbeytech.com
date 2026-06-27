@@ -432,7 +432,7 @@ body.menu-open .nav__logo { opacity: 0; pointer-events: none; }
 .hero__title-line {
   display: block;
   font-family: var(--font-disp);
-  font-size: clamp(3.5rem, 11vw, 11rem);
+  font-size: clamp(2.4rem, 6vw, 5.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   color: #fff;
