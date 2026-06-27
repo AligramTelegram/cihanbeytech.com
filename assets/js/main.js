@@ -54,6 +54,16 @@ const heroTl = gsap.timeline({ delay: 0.3 });
 heroTl
   .to('.hero__info', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' });
 
+/* Scroll ettikçe scroll göstergesini gizle */
+const scrollIndicator = document.querySelector('.hero__scroll');
+if (scrollIndicator) {
+  window.addEventListener('scroll', () => {
+    const hide = window.scrollY > 80;
+    scrollIndicator.style.opacity = hide ? '0' : '';
+    scrollIndicator.style.transition = 'opacity 0.4s';
+  }, { passive: true });
+}
+
 /* ── HAKKIMIZDA ── */
 gsap.to('.abt-reveal', {
   opacity: 1, y: 0,

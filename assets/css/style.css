@@ -335,6 +335,59 @@ body.menu-open .nav__logo { opacity: 0; pointer-events: none; }
   );
 }
 
+/* Scroll göstergesi — tam ortada */
+.hero__scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  animation: scrollFadeIn 1s ease 1.4s forwards;
+}
+
+.hero__scroll-text {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 52px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero__scroll-dot {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 1px;
+  height: 8px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 1px;
+  animation: scrollDrop 1.6s ease-in-out 1.6s infinite;
+}
+
+@keyframes scrollDrop {
+  0%   { top: -8px; opacity: 1; }
+  80%  { top: 52px; opacity: 0.8; }
+  100% { top: 52px; opacity: 0; }
+}
+
+@keyframes scrollFadeIn {
+  to { opacity: 1; }
+}
+
 /* Alt içerik şeridi */
 .hero__bottom {
   position: relative;
