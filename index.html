@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CihanBeyTech — Web Tasarım & Yazılım</title>
+  <meta name="description" content="Modern web tasarım ve yazılım çözümleri. CihanBeyTech ile dijital vizyonunuzu gerçeğe dönüştürün." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-cb">Cihanbey</span><span class="nav__logo-tech">Tech</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#hizmetler" class="nav__link">Hizmetler</a></li>
+        <li><a href="#projeler" class="nav__link">Projeler</a></li>
+        <li><a href="#surec" class="nav__link">Süreç</a></li>
+        <li><a href="#hakkimizda" class="nav__link">Hakkımızda</a></li>
+        <li><a href="#iletisim" class="nav__link nav__link--cta">İletişim</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <ul class="nav__mobile-links">
+        <li><a href="#hizmetler" class="nav__mobile-link">Hizmetler</a></li>
+        <li><a href="#projeler" class="nav__mobile-link">Projeler</a></li>
+        <li><a href="#surec" class="nav__mobile-link">Süreç</a></li>
+        <li><a href="#hakkimizda" class="nav__mobile-link">Hakkımızda</a></li>
+        <li><a href="#iletisim" class="nav__mobile-link">İletişim</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-orbs">
+      <div class="orb orb--1"></div>
+      <div class="orb orb--2"></div>
+      <div class="orb orb--3"></div>
+    </div>
+    <div class="hero__grid-overlay"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <h1 class="hero__title reveal-up">
+          Dijital<br />
+          <span class="hero__title-gradient">Vizyonunuzu</span><br />
+          Gerçeğe Dönüştürüyoruz
+        </h1>
+        <p class="hero__sub reveal-up">
+          Modern, hızlı ve etkileyici web siteleri ile markanızı dijital dünyada öne çıkarıyoruz.
+          Tasarımdan geliştirmeye, stratejiden sonuçlara.
+        </p>
+        <div class="hero__actions reveal-up">
+          <a href="#projeler" class="btn btn--primary">Projelerimizi Gör</a>
+          <a href="#iletisim" class="btn btn--ghost-dark">Teklif Al</a>
+        </div>
+        <div class="hero__stats reveal-up">
+          <div class="stat">
+            <span class="stat__num" data-target="312">0</span>+
+            <span class="stat__label">Tamamlanan Proje</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__num" data-target="32">0</span>+
+            <span class="stat__label">Mutlu Müşteri</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__num" data-target="5">0</span>+
+            <span class="stat__label">Yıl Deneyim</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual reveal-right">
+
+        <!-- Arka plan halka -->
+        <div class="hv__ring"></div>
+
+        <!-- Ana proje kartı -->
+        <div class="hv__card hv__card--main">
+          <div class="hv__card-header">
+            <div class="hv__card-dot" style="background:#a855f7"></div>
+            <div class="hv__card-dot" style="background:#7c3aed"></div>
+            <span class="hv__card-label">Son Proje</span>
+          </div>
+          <div class="hv__card-preview">
+            <div class="hv__preview-bar" style="width:55%;background:linear-gradient(90deg,#7c3aed,#a855f7)"></div>
+            <div class="hv__preview-bar" style="width:80%;opacity:.35"></div>
+            <div class="hv__preview-bar" style="width:65%;opacity:.2"></div>
+          </div>
+          <div class="hv__card-meta">
+            <div class="hv__meta-avatar">HR</div>
+            <div>
+              <div class="hv__meta-name">HemenDiyet</div>
+              <div class="hv__meta-role">Web Platformu</div>
+            </div>
+            <div class="hv__meta-badge">✓ Canlı</div>
+          </div>
+        </div>
+
+        <!-- Metrik kartı -->
+        <div class="hv__card hv__card--metric">
+          <div class="hv__metric-icon">📈</div>
+          <div>
+            <div class="hv__metric-val">+340%</div>
+            <div class="hv__metric-label">Organik Trafik Artışı</div>
+          </div>
+        </div>
+
+        <!-- Süre kartı -->
+        <div class="hv__card hv__card--time">
+          <div class="hv__time-head">Proje Teslim Süresi</div>
+          <div class="hv__time-val">12 <span>gün</span></div>
+          <div class="hv__time-bar">
+            <div class="hv__time-fill"></div>
+          </div>
+        </div>
+
+        <!-- Müşteri yorumu kartı -->
+        <div class="hv__card hv__card--review">
+          <div class="hv__review-stars">★★★★★</div>
+          <p class="hv__review-text">"Hayalinizdeki siteyi gerçeğe dönüştürüyorlar."</p>
+          <div class="hv__review-author">— Dr. İrem Eker</div>
+        </div>
+
+        <!-- Teknoloji rozeti -->
+        <div class="hv__tech-badges">
+          <span class="hv__tech">React</span>
+          <span class="hv__tech">Next.js</span>
+          <span class="hv__tech">Figma</span>
+          <span class="hv__tech">Node.js</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll göstergesi -->
+    <div class="hero__scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-mouse__wheel"></div>
+      </div>
+      <span>Keşfet</span>
+    </div>
+  </section>
+
+  <!-- HİZMETLER -->
+  <section class="services" id="hizmetler">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag svc-reveal">Hizmetlerimiz</span>
+        <h2 class="section-title svc-reveal">Dijital Başarınız İçin<br /><span class="gradient-text">Her Şey Burada</span></h2>
+        <p class="section-sub svc-reveal">Tasarımdan geliştirmeye, stratejiden analitiğe kadar kapsamlı dijital çözümler sunuyoruz.</p>
+      </div>
+
+      <div class="svc-bento">
+
+        <!-- Büyük kart — Web Tasarım -->
+        <div class="svc-item svc-item--large svc-item--1">
+          <div class="svc-item__num">01</div>
+          <div class="svc-item__body">
+            <div class="svc-item__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="svc-item__title">Web Tasarım</h3>
+            <p class="svc-item__desc">Markanızı yansıtan, kullanıcı dostu ve görsel olarak çarpıcı web siteleri. Her piksel bir amaca hizmet eder.</p>
+            <ul class="svc-item__tags">
+              <li>Kurumsal Site</li><li>Landing Page</li><li>E-ticaret</li>
+            </ul>
+          </div>
+          <div class="svc-item__glow"></div>
+        </div>
+
+        <!-- Orta kart — Web Geliştirme -->
+        <div class="svc-item svc-item--2">
+          <div class="svc-item__num">02</div>
+          <div class="svc-item__body">
+            <div class="svc-item__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="svc-item__title">Web Geliştirme</h3>
+            <p class="svc-item__desc">React, Next.js ve modern stack ile hızlı, ölçeklenebilir uygulamalar.</p>
+            <ul class="svc-item__tags"><li>React</li><li>Next.js</li><li>API</li></ul>
+          </div>
+          <div class="svc-item__glow"></div>
+        </div>
+
+        <!-- Küçük stat kartı -->
+        <div class="svc-item svc-item--stat svc-item--3">
+          <div class="svc-stat__val" data-count="312">0</div>
+          <div class="svc-stat__label">Tamamlanan Proje</div>
+          <div class="svc-stat__bar"><div class="svc-stat__fill"></div></div>
+        </div>
+
+        <!-- Orta kart — UI/UX -->
+        <div class="svc-item svc-item--4">
+          <div class="svc-item__num">03</div>
+          <div class="svc-item__body">
+            <div class="svc-item__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="svc-item__title">UI/UX Tasarım</h3>
+            <p class="svc-item__desc">Kullanıcıların sevdiği arayüzler. Araştırmadan prototyping'e tam süreç.</p>
+            <ul class="svc-item__tags"><li>Wireframe</li><li>Prototip</li><li>Design System</li></ul>
+          </div>
+          <div class="svc-item__glow"></div>
+        </div>
+
+        <!-- Küçük stat kartı -->
+        <div class="svc-item svc-item--stat svc-item--5">
+          <div class="svc-stat__val" data-count="98">0</div>
+          <div class="svc-stat__unit">%</div>
+          <div class="svc-stat__label">Müşteri Memnuniyeti</div>
+          <div class="svc-stat__bar"><div class="svc-stat__fill" style="width:98%"></div></div>
+        </div>
+
+        <!-- Büyük kart — SEO -->
+        <div class="svc-item svc-item--large svc-item--6">
+          <div class="svc-item__num">04</div>
+          <div class="svc-item__body">
+            <div class="svc-item__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="svc-item__title">SEO & Dijital Pazarlama</h3>
+            <p class="svc-item__desc">Arama motorlarının üst sıraları. Organik trafik ve dönüşüm odaklı büyüme stratejileri.</p>
+            <ul class="svc-item__tags"><li>Teknik SEO</li><li>İçerik</li><li>Google Ads</li></ul>
+          </div>
+          <div class="svc-item__glow"></div>
+        </div>
+
+        <!-- Orta kart — Mobil -->
+        <div class="svc-item svc-item--7">
+          <div class="svc-item__num">05</div>
+          <div class="svc-item__body">
+            <div class="svc-item__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="1.8"/><line x1="12" y1="18" x2="12.01" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="svc-item__title">Mobil Uygulama</h3>
+            <p class="svc-item__desc">iOS ve Android için kullanıcı odaklı mobil deneyimler.</p>
+            <ul class="svc-item__tags"><li>React Native</li><li>App Store</li></ul>
+          </div>
+          <div class="svc-item__glow"></div>
+        </div>
+
+        <!-- Orta kart — E-Ticaret -->
+        <div class="svc-item svc-item--8">
+          <div class="svc-item__num">06</div>
+          <div class="svc-item__body">
+            <div class="svc-item__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="1.8"/></svg>
+            </div>
+            <h3 class="svc-item__title">E-Ticaret Çözümleri</h3>
+            <p class="svc-item__desc">Satışlarınızı artıracak mağazalar. Ödeme sisteminden kargo entegrasyonuna.</p>
+            <ul class="svc-item__tags"><li>Shopify</li><li>WooCommerce</li><li>Entegrasyon</li></ul>
+          </div>
+          <div class="svc-item__glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJELERİMİZ -->
+  <section class="portfolio" id="projeler">
+    <div class="container">
+      <div class="pf-header">
+        <div class="pf-header__left">
+          <span class="section-tag pf-reveal">Portfolyo</span>
+          <h2 class="section-title pf-reveal">Yaptığımız <span class="gradient-text">İşler</span></h2>
+        </div>
+        <p class="pf-header__sub pf-reveal">Scroll yaparak projeleri keşfet.</p>
+      </div>
+    </div>
+
+    <!-- Stack wrapper -->
+    <div class="pf-stack-wrap" id="pfStackWrap">
+      <div class="pf-stack" id="pfStack">
+
+        <div class="pf-card" data-index="0" style="--accent:#7c3aed;--accent2:#a855f7">
+          <div class="pf-card__visual">
+            <div class="pf-card__shapes">
+              <div class="pf-cshape pf-cshape--1"></div>
+              <div class="pf-cshape pf-cshape--2"></div>
+              <div class="pf-cshape pf-cshape--3"></div>
+            </div>
+            <div class="pf-card__screen">
+              <div class="pf-cs__bar"><span></span><span></span><span></span></div>
+              <div class="pf-cs__body">
+                <div class="pf-cs__hero"></div>
+                <div class="pf-cs__row"><div></div><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="pf-card__num">01</div>
+          </div>
+          <div class="pf-card__info">
+            <div class="pf-card__meta">
+              <span class="pf-card__tag">Web Platform</span>
+              <span class="pf-card__year">2024</span>
+            </div>
+            <h3 class="pf-card__title">HemenDiyet</h3>
+            <p class="pf-card__desc">Online diyet danışmanlığı için modern web platformu. Randevu sistemi, hasta yönetimi ve beslenme takibi bir arada.</p>
+            <div class="pf-card__tech"><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
+            <a href="#" class="pf-card__link">Projeyi İncele <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          </div>
+        </div>
+
+        <div class="pf-card" data-index="1" style="--accent:#4f46e5;--accent2:#818cf8">
+          <div class="pf-card__visual">
+            <div class="pf-card__shapes">
+              <div class="pf-cshape pf-cshape--1"></div>
+              <div class="pf-cshape pf-cshape--2"></div>
+            </div>
+            <div class="pf-card__phone">
+              <div class="pf-cp__notch"></div>
+              <div class="pf-cp__body">
+                <div class="pf-cp__bar"></div>
+                <div class="pf-cp__bar pf-cp__bar--sm"></div>
+                <div class="pf-cp__btn"></div>
+              </div>
+            </div>
+            <div class="pf-card__num">02</div>
+          </div>
+          <div class="pf-card__info">
+            <div class="pf-card__meta">
+              <span class="pf-card__tag">Mobil Uygulama</span>
+              <span class="pf-card__year">2024</span>
+            </div>
+            <h3 class="pf-card__title">HemenSalon</h3>
+            <p class="pf-card__desc">Kuaför salonları için online randevu ve müşteri yönetim uygulaması. iOS & Android.</p>
+            <div class="pf-card__tech"><span>React Native</span><span>Firebase</span><span>Push Notification</span></div>
+            <a href="#" class="pf-card__link">Projeyi İncele <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          </div>
+        </div>
+
+        <div class="pf-card" data-index="2" style="--accent:#9333ea;--accent2:#d946ef">
+          <div class="pf-card__visual">
+            <div class="pf-card__shapes">
+              <div class="pf-cshape pf-cshape--1"></div>
+              <div class="pf-cshape pf-cshape--2"></div>
+              <div class="pf-cshape pf-cshape--3"></div>
+            </div>
+            <div class="pf-card__screen">
+              <div class="pf-cs__bar"><span></span><span></span><span></span></div>
+              <div class="pf-cs__body">
+                <div class="pf-cs__hero"></div>
+                <div class="pf-cs__row"><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="pf-card__num">03</div>
+          </div>
+          <div class="pf-card__info">
+            <div class="pf-card__meta">
+              <span class="pf-card__tag">Web Tasarım</span>
+              <span class="pf-card__year">2023</span>
+            </div>
+            <h3 class="pf-card__title">PawRecord</h3>
+            <p class="pf-card__desc">Evcil hayvan sağlık takibi ve veteriner randevu platformu. Aşı, muayene ve sağlık geçmişi yönetimi.</p>
+            <div class="pf-card__tech"><span>Next.js</span><span>Prisma</span><span>Vercel</span></div>
+            <a href="#" class="pf-card__link">Projeyi İncele <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          </div>
+        </div>
+
+        <div class="pf-card" data-index="3" style="--accent:#6d28d9;--accent2:#c084fc">
+          <div class="pf-card__visual">
+            <div class="pf-card__shapes">
+              <div class="pf-cshape pf-cshape--1"></div>
+              <div class="pf-cshape pf-cshape--2"></div>
+            </div>
+            <div class="pf-card__screen">
+              <div class="pf-cs__bar"><span></span><span></span><span></span></div>
+              <div class="pf-cs__body">
+                <div class="pf-cs__hero"></div>
+                <div class="pf-cs__row"><div></div><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="pf-card__num">04</div>
+          </div>
+          <div class="pf-card__info">
+            <div class="pf-card__meta">
+              <span class="pf-card__tag">Web Tasarım</span>
+              <span class="pf-card__year">2023</span>
+            </div>
+            <h3 class="pf-card__title">Dr. İrem Eker</h3>
+            <p class="pf-card__desc">Diyetisyen kişisel marka sitesi ve blog platformu. SEO optimizasyonu ile organik trafik artışı.</p>
+            <div class="pf-card__tech"><span>WordPress</span><span>SEO</span><span>Google Analytics</span></div>
+            <a href="#" class="pf-card__link">Projeyi İncele <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          </div>
+        </div>
+
+        <div class="pf-card" data-index="4" style="--accent:#4338ca;--accent2:#818cf8">
+          <div class="pf-card__visual">
+            <div class="pf-card__shapes">
+              <div class="pf-cshape pf-cshape--1"></div>
+              <div class="pf-cshape pf-cshape--2"></div>
+            </div>
+            <div class="pf-card__phone">
+              <div class="pf-cp__notch"></div>
+              <div class="pf-cp__body">
+                <div class="pf-cp__bar"></div>
+                <div class="pf-cp__bar pf-cp__bar--sm"></div>
+                <div class="pf-cp__btn"></div>
+              </div>
+            </div>
+            <div class="pf-card__num">05</div>
+          </div>
+          <div class="pf-card__info">
+            <div class="pf-card__meta">
+              <span class="pf-card__tag">Mobil Uygulama</span>
+              <span class="pf-card__year">2024</span>
+            </div>
+            <h3 class="pf-card__title">SalonAPY v2</h3>
+            <p class="pf-card__desc">Güzellik salonu zincirleri için kapsamlı yönetim ve analitik uygulaması. Çoklu şube desteği.</p>
+            <div class="pf-card__tech"><span>React Native</span><span>Redux</span><span>Analytics</span></div>
+            <a href="#" class="pf-card__link">Projeyi İncele <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- İlerleme göstergesi -->
+    <div class="pf-progress container">
+      <div class="pf-progress__dots" id="pfDots">
+        <span class="pf-dot pf-dot--active"></span>
+        <span class="pf-dot"></span>
+        <span class="pf-dot"></span>
+        <span class="pf-dot"></span>
+        <span class="pf-dot"></span>
+      </div>
+      <span class="pf-progress__label"><span id="pfCurrent">01</span> / 05</span>
+    </div>
+  </section>
+
+  <!-- SÜREÇ -->
+  <section class="process" id="surec">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Nasıl Çalışırız</span>
+        <h2 class="section-title reveal-up">Başarıya Giden <span class="gradient-text">4 Adım</span></h2>
+        <p class="section-sub reveal-up">Şeffaf, hızlı ve sonuç odaklı bir süreç yürütüyoruz.</p>
+      </div>
+      <div class="process__steps">
+        <div class="process__line"></div>
+
+        <div class="process__step reveal-up">
+          <div class="process__num">01</div>
+          <div class="process__card">
+            <div class="process__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Keşif & Brifing</h3>
+            <p>Hedeflerinizi, rakiplerinizi ve beklentilerinizi derinlemesine anlıyoruz. Proje kapsamını birlikte belirliyoruz.</p>
+          </div>
+        </div>
+
+        <div class="process__step reveal-up" style="--delay:0.15s">
+          <div class="process__num">02</div>
+          <div class="process__card">
+            <div class="process__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Tasarım & Prototip</h3>
+            <p>Onayladığınız wireframe'lerden etkileyici tasarımlar üretiyoruz. Her detay sizinle konuşularak şekilleniyor.</p>
+          </div>
+        </div>
+
+        <div class="process__step reveal-up" style="--delay:0.3s">
+          <div class="process__num">03</div>
+          <div class="process__card">
+            <div class="process__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Geliştirme & Test</h3>
+            <p>Temiz kod, hızlı yükleme, tüm cihazlarda mükemmel görünüm. Kapsamlı testlerle kaliteyi garanti ediyoruz.</p>
+          </div>
+        </div>
+
+        <div class="process__step reveal-up" style="--delay:0.45s">
+          <div class="process__num">04</div>
+          <div class="process__card">
+            <div class="process__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Lansman & Destek</h3>
+            <p>Projenizi canlıya alıyoruz ve devamında yanınızda oluyoruz. Bakım, güncelleme ve geliştirme desteği sağlıyoruz.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HAKKIMIZDA -->
+  <section class="about" id="hakkimizda">
+    <div class="container about__inner">
+      <div class="about__visual reveal-left">
+        <div class="about__img-wrap">
+          <div class="about__img-bg"></div>
+          <div class="about__img-card">
+            <div class="about__img-content">
+              <div class="about__avatar">CB</div>
+              <div>
+                <div class="about__name">CihanBeyTech</div>
+                <div class="about__role">Digital Agency</div>
+              </div>
+            </div>
+            <div class="about__badges">
+              <span class="about__badge">⚡ Hızlı Teslimat</span>
+              <span class="about__badge">🎯 Sonuç Odaklı</span>
+              <span class="about__badge">💎 Premium Kalite</span>
+            </div>
+          </div>
+          <div class="about__float-stat">
+            <span class="about__float-num">%98</span>
+            <span class="about__float-label">Müşteri Memnuniyeti</span>
+          </div>
+        </div>
+      </div>
+      <div class="about__content reveal-right">
+        <span class="section-tag">Hakkımızda</span>
+        <h2 class="section-title">Dijitalde Güvendiğiniz <span class="gradient-text">Ortağınız</span></h2>
+        <p class="about__text">CihanBeyTech olarak 5 yılı aşkın süredir işletmelerin dijital dönüşümüne öncülük ediyoruz. Küçük işletmelerden büyük kurumlara kadar her ölçekte projeyi başarıyla teslim ettik.</p>
+        <p class="about__text">Bize göre her web sitesi sadece bir teknoloji ürünü değil, markanızın dijital yüzü ve en güçlü satış aracınızdır. Bu yüzden işe her zaman "sonuç" perspektifinden bakıyoruz.</p>
+        <div class="about__skills">
+          <div class="skill-bar">
+            <div class="skill-bar__header"><span>Web Tasarım</span><span>95%</span></div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header"><span>Frontend Geliştirme</span><span>90%</span></div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header"><span>UI/UX Tasarım</span><span>88%</span></div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header"><span>SEO & Pazarlama</span><span>82%</span></div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="82"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERANSLAR -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Müşterilerimiz</span>
+        <h2 class="section-title reveal-up">Ne Diyorlar?</h2>
+      </div>
+      <div class="testimonials__grid">
+
+        <div class="testimonial-card reveal-up">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"CihanBeyTech ile çalışmak gerçekten mükemmeldi. Web sitemiz hem görsel olarak harika hem de müşterilerimizden sürekli olumlu geri bildirim alıyoruz."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">İE</div>
+            <div>
+              <div class="testimonial-card__name">Dr. İrem Eker</div>
+              <div class="testimonial-card__role">Diyetisyen</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal-up" style="--delay:0.15s">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Randevu sistemimiz tam istediğimiz gibi çıktı. Müşterilerimiz artık çok daha kolay randevu alıyor ve işletmemizin verimliliği arttı."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">SA</div>
+            <div>
+              <div class="testimonial-card__name">Salon Sahibi</div>
+              <div class="testimonial-card__role">HemenSalon Müşterisi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal-up" style="--delay:0.3s">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Projeyi zamanında ve bütçe dahilinde teslim ettiler. Sonuçlar beklediklerimizin çok üzerinde. Kesinlikle tavsiye ediyorum."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">MC</div>
+            <div>
+              <div class="testimonial-card__name">Dr. Mine Coşkun</div>
+              <div class="testimonial-card__role">Diyetisyen & Blogger</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM -->
+  <section class="contact" id="iletisim">
+    <div class="contact__bg-orb"></div>
+    <div class="container contact__inner">
+      <div class="contact__info reveal-left">
+        <span class="section-tag">İletişim</span>
+        <h2 class="section-title">Projenizi <span class="gradient-text">Konuşalım</span></h2>
+        <p class="contact__sub">Ücretsiz danışmanlık için bize ulaşın. 24 saat içinde size geri döneceğiz.</p>
+        <div class="contact__details">
+          <div class="contact__detail">
+            <div class="contact__detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <div>
+              <div class="contact__detail-label">E-posta</div>
+              <div class="contact__detail-val">cihanbeydigital@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact__detail">
+            <div class="contact__detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 13a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <div>
+              <div class="contact__detail-label">Telefon</div>
+              <div class="contact__detail-val">+90 555 000 00 00</div>
+            </div>
+          </div>
+          <div class="contact__detail">
+            <div class="contact__detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <div>
+              <div class="contact__detail-label">Konum</div>
+              <div class="contact__detail-val">Türkiye (Remote)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact__form-wrap reveal-right">
+        <form class="contact__form" id="contactForm">
+          <div class="form-group">
+            <label class="form-label">Ad Soyad</label>
+            <input type="text" class="form-input" placeholder="Adınızı girin" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">E-posta</label>
+            <input type="email" class="form-input" placeholder="eposta@örnek.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Hizmet</label>
+            <select class="form-input form-select">
+              <option value="">Hizmet seçin</option>
+              <option>Web Tasarım</option>
+              <option>Web Geliştirme</option>
+              <option>Mobil Uygulama</option>
+              <option>SEO & Pazarlama</option>
+              <option>UI/UX Tasarım</option>
+              <option>E-Ticaret</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mesajınız</label>
+            <textarea class="form-input form-textarea" placeholder="Projeniz hakkında kısaca bilgi verin..." rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            <span class="btn__text">Mesaj Gönder</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2"/><polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo">
+          <span class="nav__logo-cb">CihanBey</span><span class="nav__logo-tech">Tech</span>
+        </a>
+        <p class="footer__tagline">Dijital vizyonunuzu gerçeğe dönüştürüyoruz.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="Twitter/X">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__links-group">
+        <h4>Hizmetler</h4>
+        <ul>
+          <li><a href="#hizmetler">Web Tasarım</a></li>
+          <li><a href="#hizmetler">Web Geliştirme</a></li>
+          <li><a href="#hizmetler">Mobil Uygulama</a></li>
+          <li><a href="#hizmetler">SEO & Pazarlama</a></li>
+          <li><a href="#hizmetler">UI/UX Tasarım</a></li>
+        </ul>
+      </div>
+      <div class="footer__links-group">
+        <h4>Şirket</h4>
+        <ul>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
+          <li><a href="#projeler">Projeler</a></li>
+          <li><a href="#surec">Sürecimiz</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+      </div>
+      <div class="footer__links-group">
+        <h4>İletişim</h4>
+        <ul>
+          <li><a href="mailto:cihanbeydigital@gmail.com">cihanbeydigital@gmail.com</a></li>
+          <li><a href="tel:+905550000000">+90 555 000 00 00</a></li>
+          <li>Türkiye (Remote)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2025 CihanBeyTech. Tüm hakları saklıdır.</span>
+        <span>Tasarım & Geliştirme: CihanBeyTech</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
