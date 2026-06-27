@@ -426,14 +426,14 @@ body.menu-open .nav__logo { opacity: 0; pointer-events: none; }
 /* Dev başlık */
 .hero__title {
   font-family: var(--font-disp);
-  font-size: clamp(3.5rem, 10vw, 10rem);
+  font-size: clamp(2.8rem, 7.5vw, 7.5rem);
   font-weight: 800;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
+  line-height: 1;
+  letter-spacing: -0.03em;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 40px 0;
+  gap: 4px;
+  padding: 32px 0;
   flex: 1;
   justify-content: center;
 }
@@ -441,11 +441,9 @@ body.menu-open .nav__logo { opacity: 0; pointer-events: none; }
 .hero__row {
   display: flex;
   align-items: baseline;
-  gap: 0.3em;
+  gap: 0.25em;
   overflow: hidden;
 }
-
-.hero__row--right { justify-content: flex-end; padding-right: 160px; }
 
 .hero__word {
   display: block;
@@ -453,9 +451,13 @@ body.menu-open .nav__logo { opacity: 0; pointer-events: none; }
   opacity: 0;
 }
 
+.hero__word--solid {
+  color: #fff;
+}
+
 .hero__word--outline {
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(255,255,255,0.2);
+  -webkit-text-stroke: 1.5px rgba(255,255,255,0.35);
   font-style: italic;
 }
 
@@ -1026,8 +1028,7 @@ body.menu-open .nav__logo { opacity: 0; pointer-events: none; }
 
   .hero__inner { padding-left: var(--pad); padding-top: 24px; }
   .hero__side-label, .hero__badge-wrap { display: none; }
-  .hero__row--right { padding-right: 0; justify-content: flex-start; }
-  .hero__title { font-size: clamp(2.8rem, 11vw, 5rem); padding: 24px 0; gap: 4px; }
+  .hero__title { font-size: clamp(2.4rem, 9vw, 4rem); padding: 24px 0; gap: 4px; }
   .hero__bottom { flex-direction: column; align-items: flex-start; gap: 24px; padding-bottom: 32px; }
   .hero__metrics { gap: 24px; }
   .hero__metric { align-items: flex-start; }
