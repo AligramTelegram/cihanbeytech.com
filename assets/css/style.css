@@ -263,7 +263,7 @@ body {
   justify-content: center;
   gap: 6px;
   transition: background 0.25s, border-color 0.25s;
-  z-index: 1001;
+  z-index: 1003;
   position: relative;
 }
 
@@ -289,7 +289,7 @@ body {
 .nav-overlay {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 1001;
   background: #080612;
   display: flex;
   flex-direction: column;
@@ -304,30 +304,21 @@ body {
   clip-path: circle(150% at calc(100% - 56px) 36px);
 }
 
-/* Üst satır: logo + sosyal + X */
+/* Üst satır: sosyal linkler (burger ile aynı yükseklikte) */
 .nav-overlay__top {
   display: flex;
   align-items: center;
   height: var(--nav-h);
-  gap: 32px;
   border-bottom: 1px solid rgba(255,255,255,0.07);
   flex-shrink: 0;
 }
-
-.nav-overlay__logo {
-  font-family: var(--font-display);
-  font-size: 1.3rem; font-weight: 800;
-  text-decoration: none;
-  letter-spacing: -0.02em;
-  margin-right: auto;
-}
-.nav-overlay__logo span:first-child { color: #f5f0ff; }
-.nav-overlay__logo span:last-child  { color: var(--purple-light); }
 
 .nav-overlay__socials {
   display: flex;
   align-items: center;
   gap: 24px;
+  margin-left: auto;
+  padding-right: 72px; /* burger butonunun genişliği kadar sağdan boşluk */
 }
 
 .nav-overlay__socials-label {
@@ -460,6 +451,19 @@ body {
   width: 1px;
   height: 28px;
   background: rgba(255,255,255,0.12);
+}
+
+/* Overlay açıkken nav içeriğini gizle (burger hariç) */
+.nav-overlay.is-open ~ * .nav__logo,
+body.menu-open .nav__logo,
+body.menu-open .nav__status {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.nav__logo, .nav__status {
+  transition: opacity 0.3s;
 }
 
 @media (max-width: 768px) {

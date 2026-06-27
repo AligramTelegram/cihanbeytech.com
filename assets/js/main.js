@@ -16,25 +16,24 @@ ScrollTrigger.create({
 /* ------ OVERLAY MENU ------ */
 const burger     = document.getElementById('burger');
 const navOverlay = document.getElementById('navOverlay');
-const navClose   = document.getElementById('navClose');
 
 function openMenu() {
   navOverlay.classList.add('is-open');
   burger.classList.add('is-open');
+  document.body.classList.add('menu-open');
   document.body.style.overflow = 'hidden';
 }
 
 function closeMenu() {
   navOverlay.classList.remove('is-open');
   burger.classList.remove('is-open');
+  document.body.classList.remove('menu-open');
   document.body.style.overflow = '';
 }
 
 burger.addEventListener('click', () => {
   navOverlay.classList.contains('is-open') ? closeMenu() : openMenu();
 });
-
-navClose.addEventListener('click', closeMenu);
 
 document.querySelectorAll('.nav-overlay__link').forEach(link => {
   link.addEventListener('click', closeMenu);
