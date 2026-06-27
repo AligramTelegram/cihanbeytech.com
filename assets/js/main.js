@@ -49,13 +49,19 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ── HERO ENTRANCE ── */
-gsap.timeline({ delay: 0.1 })
-  .to('.hero__eyebrow', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' })
-  .to('.hero__line',    { opacity: 1, y: 0, duration: 0.9, stagger: 0.1, ease: 'power3.out' }, '-=0.3')
-  .to('.hero__sub',     { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
-  .to('.hero__cta',     { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
-  .to('.hero__metrics', { opacity: 1, duration: 0.7, ease: 'power2.out' }, '-=0.3')
-  .to('.hero__scroll-hint', { opacity: 1, duration: 0.5 }, '-=0.2');
+const heroTl = gsap.timeline({ delay: 0.15 });
+
+heroTl
+  .to('.hero__topbar', { opacity: 1, duration: 0.6, ease: 'power2.out' })
+  .to('.hero__topbar-line', { width: '100%', duration: 1, ease: 'power2.out' }, '-=0.4')
+  .to('.hero__word', {
+    y: '0%', opacity: 1,
+    duration: 0.9, stagger: 0.08,
+    ease: 'power4.out'
+  }, '-=0.6')
+  .to('.hero__bottom',     { opacity: 1, duration: 0.7, ease: 'power2.out' }, '-=0.3')
+  .to('.hero__side-label', { opacity: 1, duration: 0.6, ease: 'power2.out' }, '-=0.5')
+  .to('.hero__badge-wrap', { opacity: 1, duration: 0.6, ease: 'power2.out' }, '-=0.5');
 
 /* Hero metrik sayacı */
 const heroNum = document.querySelector('.hero__metric-num[data-target]');

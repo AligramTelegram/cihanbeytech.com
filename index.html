@@ -61,44 +61,73 @@
       <div class="hero__blob hero__blob--1"></div>
       <div class="hero__blob hero__blob--2"></div>
       <div class="hero__blob hero__blob--3"></div>
-      <div class="hero__noise"></div>
     </div>
 
+    <!-- Sol dikey etiket -->
+    <div class="hero__side-label">
+      <span>Web Tasarım & Yazılım</span>
+    </div>
+
+    <!-- Dönen rozet -->
+    <div class="hero__badge-wrap">
+      <div class="hero__badge" id="heroBadge">
+        <svg class="hero__badge-ring" viewBox="0 0 120 120">
+          <defs>
+            <path id="circle" d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"/>
+          </defs>
+          <text class="hero__badge-text">
+            <textPath href="#circle">CihanBeyTech · Istanbul · 2019 · </textPath>
+          </text>
+        </svg>
+        <svg class="hero__badge-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Ana içerik -->
     <div class="hero__inner container">
-      <div class="hero__eyebrow">
-        <span class="hero__dot"></span>
-        Web Tasarım & Yazılım Ajansı
+
+      <!-- Üst çizgi -->
+      <div class="hero__topbar">
+        <div class="hero__topbar-line"></div>
+        <span class="hero__topbar-label">— 2019'dan beri</span>
       </div>
 
+      <!-- Dev başlık -->
       <h1 class="hero__title">
-        <span class="hero__line">Dijital</span>
-        <span class="hero__line hero__line--accent">Vizyonunuzu</span>
-        <span class="hero__line">Gerçeğe</span>
-        <span class="hero__line">Dönüştürüyoruz.</span>
+        <span class="hero__row">
+          <span class="hero__word hero__word--outline">Dijital</span>
+          <span class="hero__word">Vizyon</span>
+        </span>
+        <span class="hero__row hero__row--right">
+          <span class="hero__word">Gerçeğe</span>
+          <span class="hero__word hero__word--outline">Dönüşür.</span>
+        </span>
       </h1>
 
-      <div class="hero__foot">
-        <p class="hero__sub">Istanbul merkezli, küresel ölçekte hizmet veren<br>web tasarım ve yazılım ekibi.</p>
-        <a href="#iletisim" class="hero__cta">
-          Projeyi Başlat
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </a>
-      </div>
-
-      <div class="hero__metrics">
-        <div class="hero__metric">
-          <span class="hero__metric-num" data-target="312">0</span>
-          <span class="hero__metric-label">Tamamlanan Proje</span>
+      <!-- Alt bar: açıklama + CTA + metrikler -->
+      <div class="hero__bottom">
+        <div class="hero__bottom-left">
+          <p class="hero__sub">İstanbul merkezli web tasarım & yazılım ajansı.<br>312+ proje, %100 müşteri memnuniyeti.</p>
+          <a href="#iletisim" class="hero__cta">
+            Projeyi Başlat
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
         </div>
-        <div class="hero__metric-div"></div>
-        <div class="hero__metric">
-          <span class="hero__metric-num">5+</span>
-          <span class="hero__metric-label">Yıl Deneyim</span>
-        </div>
-        <div class="hero__metric-div"></div>
-        <div class="hero__metric">
-          <span class="hero__metric-num">%100</span>
-          <span class="hero__metric-label">Müşteri Memnuniyeti</span>
+        <div class="hero__metrics">
+          <div class="hero__metric">
+            <span class="hero__metric-num" data-target="312">0</span>
+            <span class="hero__metric-label">Proje</span>
+          </div>
+          <div class="hero__metric">
+            <span class="hero__metric-num">5+</span>
+            <span class="hero__metric-label">Yıl</span>
+          </div>
+          <div class="hero__metric">
+            <span class="hero__metric-num">%100</span>
+            <span class="hero__metric-label">Memnuniyet</span>
+          </div>
         </div>
       </div>
     </div>
