@@ -13,26 +13,31 @@ ScrollTrigger.create({
   }
 });
 
-/* ------ MOBILE MENU ------ */
+/* ------ OVERLAY MENU ------ */
 const burger     = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
+const navOverlay = document.getElementById('navOverlay');
+const navClose   = document.getElementById('navClose');
+
+function openMenu() {
+  navOverlay.classList.add('is-open');
+  burger.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+  navOverlay.classList.remove('is-open');
+  burger.classList.remove('is-open');
+  document.body.style.overflow = '';
+}
 
 burger.addEventListener('click', () => {
-  const open  = mobileMenu.classList.toggle('open');
-  const spans = burger.querySelectorAll('span');
-  gsap.to(spans[0], { rotation: open ? 45 : 0,  y: open ? 7 : 0,  duration: 0.3 });
-  gsap.to(spans[1], { opacity:  open ? 0 : 1,            duration: 0.2 });
-  gsap.to(spans[2], { rotation: open ? -45 : 0, y: open ? -7 : 0, duration: 0.3 });
+  navOverlay.classList.contains('is-open') ? closeMenu() : openMenu();
 });
 
-document.querySelectorAll('.nav__mobile-link').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    const spans = burger.querySelectorAll('span');
-    gsap.to(spans[0], { rotation: 0, y: 0, duration: 0.3 });
-    gsap.to(spans[1], { opacity: 1,        duration: 0.2 });
-    gsap.to(spans[2], { rotation: 0, y: 0, duration: 0.3 });
-  });
+navClose.addEventListener('click', closeMenu);
+
+document.querySelectorAll('.nav-overlay__link').forEach(link => {
+  link.addEventListener('click', closeMenu);
 });
 
 
